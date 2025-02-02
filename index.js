@@ -1,13 +1,18 @@
 let firstCard = 10
 let secondCard = 11
 let sum = firstCard + secondCard
+let hasBlack = false
 let isAlive = true
+let message = ""
 
 if (sum <= 20){
-    console.log("Do you to draw a new card?")
+    message = "Do you to draw a new card?";
 } else if (sum ===21) {
-    console.log("Whohoo! You've got BlackJack!")
+    message = "Whohoo! You've got BlackJack!";
+    hasBlack = true
 } else {
-    console.log("You're out of the game")
+    message = "You're out of the game";
     isAlive = false
 }
+
+console.log(message)
