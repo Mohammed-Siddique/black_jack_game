@@ -15,7 +15,11 @@ function startGame(){
 
 function renderGame() {
     
-    cardEl.textContent = "Cards: " + cards[0] +" " + cards[1]
+    cardEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        cardEl.textContent += cards[i] + " "
+    }
+
     sumEl.textContent = "Sum: " + sum
     
 
@@ -34,11 +38,10 @@ function renderGame() {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck")
     let card = 7
     sum += card
     cards.push(card)
-
+    console.log(cards)
     renderGame()
 }
 
