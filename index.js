@@ -52,7 +52,7 @@ function renderGame() {
 }
 
 function newCard() {
-    if (isAlive === true && hasBlack === false) {
+    if (isAlive === false && hasBlack === false) {
         let card = getRandomCard()
     sum += card
     cards.push(card)
