@@ -1,3 +1,8 @@
+let player = {
+    "name" : "Sid",
+    "chips" :  145
+}
+
 let cards = []
 let sum = 0
 let hasBlack = false
@@ -6,6 +11,10 @@ let message = ""
 let messageEl = document.getElementById('message-el')
 let sumEl = document.querySelector('#sum-el')
 let cardEl = document.querySelector('#cards-el')
+
+let playerEl = document.getElementById('player-el')
+
+playerEl.textContent = player.name + " : $" +player.chips
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random()*13) + 1
@@ -52,12 +61,12 @@ function renderGame() {
 }
 
 function newCard() {
-    if (isAlive === false && hasBlack === false) {
+    if (isAlive === true && hasBlack === false) {
         let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    console.log(cards)
-    renderGame()
+        sum += card
+        cards.push(card)
+        // console.log(cards)
+        renderGame()
     }
     
 }
